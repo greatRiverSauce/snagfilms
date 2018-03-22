@@ -20,9 +20,14 @@
     </ng-template>
 
     <ng-template #item let-item let-i="index">
-      <div class="items">
-        <img src="{{ item.images.image[0].src }}" style="max-width: 300px;">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="items">
+            <img src="{{ item.images.image[0].src }}">
+          </div>
+        </div>
       </div>
+
     </ng-template>
   </div>
 </div>
