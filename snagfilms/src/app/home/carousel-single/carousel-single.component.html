@@ -1,6 +1,6 @@
 <div class="row">
   <div [style.height]="height" class="items" appSlide (mouseover)="show = true" (mouseleave)="show = false">
     <img src="{{ item.images.image[0].src }}" >
-    <div class="title" *ngIf="show">{{item.title}}</div>
+    <div [style.fontSize]="font" class="title" *ngIf="show">{{item.title}}</div>
   </div>
 </div>

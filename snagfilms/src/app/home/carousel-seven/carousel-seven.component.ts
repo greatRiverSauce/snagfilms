@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {Subscription} from "rxjs/Subscription";
 import {ServerService} from "../../server.service";
 import { Response } from '@angular/http';
+
 @Component({
-  selector: 'app-carousel-five',
-  templateUrl: './carousel-five.component.html',
-  styleUrls: ['./carousel-five.component.css']
+  selector: 'app-carousel-seven',
+  templateUrl: './carousel-seven.component.html',
+  styleUrls: ['./carousel-seven.component.css']
 })
-export class CarouselFiveComponent implements OnInit {
-  items_1: Array<any> = [];
+export class CarouselSevenComponent implements OnInit {
+  items_2: Array<any> = [];
   
   subscription: Subscription;
   constructor(private serverService: ServerService) {
@@ -20,7 +21,7 @@ export class CarouselFiveComponent implements OnInit {
     this.subscription = this.serverService.getFilms().subscribe(
       (response:Response) => {
         const data = response.json();
-        this.items_1 = data.films.film.splice(10, 10);
+        this.items_2 = data.films.film.splice(20, 10);
 
       },
       (error) => { console.log(error)}
@@ -29,4 +30,5 @@ export class CarouselFiveComponent implements OnInit {
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
+
 }

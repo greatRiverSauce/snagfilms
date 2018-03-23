@@ -8,12 +8,11 @@ import { Component, OnInit, Input, ElementRef, Renderer2,HostBinding } from '@an
 })
 export class CarouselSingleComponent implements OnInit {
   @Input('item') item: any;
-  @Input() height:any;
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
+  @Input() height;
+  @Input() font;
+  constructor() { }
 
   ngOnInit() {
   }
-  getHeight() {
-    return this.height;
-  }
+
 }
