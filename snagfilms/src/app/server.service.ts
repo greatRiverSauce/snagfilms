@@ -7,6 +7,6 @@ export class ServerService{
 
   }
   getFilms() {
-    return this.http.get('http://www.snagfilms.com/apis/films.json');
+    return this.http.get('//www.snagfilms.com/apis/films.json');
   }
 }
