@@ -13,7 +13,8 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { ServerService } from './server.service';
 import { HttpModule } from '@angular/http';
 import { SlideDirective } from './home/slide.directive';
-import { CarouselSingleComponent } from './home/carousel-five/carousel-single/carousel-single.component';
+import { CarouselSingleComponent } from './home/carousel-single/carousel-single.component';
+import { CarouselSevenComponent } from './home/carousel-seven/carousel-seven.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CarouselSingleComponent } from './home/carousel-five/carousel-single/ca
     CarouselFiveComponent,
     FooterComponent,
     SlideDirective,
-    CarouselSingleComponent
+    CarouselSingleComponent,
+    CarouselSevenComponent
   ],
   imports: [
     BrowserModule,
