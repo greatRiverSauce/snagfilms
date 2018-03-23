@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="col-xl-12 ">
     <h3>BEFORE THEY WERE STARS</h3>
   </div>
   <div class="col-xs-12">
@@ -20,20 +20,13 @@
     </ng-template>
 
     <ng-template #item let-item let-i="index">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="items">
-            <img src="{{ item.images.image[0].src }}">
-          </div>
-        </div>
-      </div>
-
+      <app-carousel-single [item]="item" height="100px"></app-carousel-single>
     </ng-template>
   </div>
 </div>
 <!--ATHLETES & THEIR TRIUMPHS-->
 <div class="row">
-  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="col-xl-12">
     <h3>ATHLETES & THEIR TRIUMPHS</h3>
   </div>
   <div class="col-xs-12">
@@ -54,67 +47,7 @@
     </ng-template>
 
     <ng-template #item let-item let-i="index">
-      <div class="items">
-        <img src="{{ item.images.image[0].src }}" style="max-width: 300px;">
-      </div>
-    </ng-template>
-  </div>
-</div>
-<!--HISTORY LESSONS-->
-<div class="row">
-  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-    <h3>HISTORY LESSONS</h3>
-  </div>
-  <div class="col-xs-12">
-    <div
-      ng2-carouselamos
-      class="slides-wrapper"
-      [items]="items_3"
-      [width]="1028"
-      [$prev]="prev"
-      [$next]="next"
-      [$item]="item">
-    </div>
-    <ng-template #prev>
-      <img src="assets/images/left-arrow.png" id="left"/>
-    </ng-template>
-    <ng-template #next>
-      <img src="assets/images/right-arrow.png" id="right" />
-    </ng-template>
-
-    <ng-template #item let-item let-i="index">
-      <div class="items">
-        <img src="{{ item.images.image[0].src }}" style="max-width: 300px;">
-      </div>
-    </ng-template>
-  </div>
-</div>
-<!--CLIMATE CHANGE & THE ENVIRONMENT-->
-<div class="row">
-  <div class="col-xs-12">
-    <h3>CLIMATE CHANGE & THE ENVIRONMENT</h3>
-  </div>
-  <div class="col-xs-12">
-    <div
-      ng2-carouselamos
-      class="slides-wrapper"
-      [items]="items_4"
-      [width]="1028"
-      [$prev]="prev"
-      [$next]="next"
-      [$item]="item">
-    </div>
-    <ng-template #prev>
-      <img src="assets/images/left-arrow.png" id="left"/>
-    </ng-template>
-    <ng-template #next>
-      <img src="assets/images/right-arrow.png" id="right" />
-    </ng-template>
-
-    <ng-template #item let-item let-i="index">
-      <div class="items">
-        <img src="{{ item.images.image[0].src }}" style="max-width: 600px;">
-      </div>
+      <app-carousel-single [item]="item" height="200px"></app-carousel-single>
     </ng-template>
   </div>
 </div>

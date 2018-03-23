@@ -9,9 +9,9 @@ import {Subscription} from "rxjs/Subscription";
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit, OnDestroy {
+  data:any =[];
   firstMovie:any = "";
   movies: any = [];
-  data: any;
   subscription: Subscription;
   constructor(private serverService: ServerService) { }
 
@@ -19,8 +19,9 @@ export class CarouselComponent implements OnInit, OnDestroy {
     this.subscription = this.serverService.getFilms().subscribe(
       (response:Response) => {
         const data = response.json();
-        this.firstMovie = data.films.film[0];
-        this.movies = data.films.film.splice(1, 9);
+        this.data = data;
+        this.firstMovie = this.data.films.film[0];
+        this.movies = this.data.films.film.splice(1, 6);
         console.log(this.movies);
       },
       (error) => { console.log(error)}

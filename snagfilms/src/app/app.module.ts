@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { ServerService } from './server.service';
 import { HttpModule } from '@angular/http';
+import { SlideDirective } from './home/slide.directive';
+import { CarouselSingleComponent } from './home/carousel-five/carousel-single/carousel-single.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HttpModule } from '@angular/http';
     HomepageComponent,
     CarouselComponent,
     CarouselFiveComponent,
-    FooterComponent
+    FooterComponent,
+    SlideDirective,
+    CarouselSingleComponent
   ],
   imports: [
     BrowserModule,

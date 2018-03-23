@@ -14,8 +14,8 @@ export class CarouselFiveComponent implements OnInit {
   items_4: Array<any> = [];
 
 
-  subscription: Subscription;
 
+  subscription: Subscription;
   constructor(private serverService: ServerService) {
 
   }
